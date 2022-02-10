@@ -75,6 +75,7 @@ describe("ZeroTest", function () {
   it("should be withdrawed only contract owner", async function () {
     const withdrawAmount = ethers.utils.parseUnits("0.1", "ether");
     await zeroTest.withdraw(contractAddress, withdrawAmount);
+    await zeroTest.withdraw(tokenAddress, 1);
   });
 
   it("should be that withdraw amount is less than contract balance", async function () {
